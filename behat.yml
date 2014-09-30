@@ -1,0 +1,10 @@
+default:
+  paths:
+    features: app/tests/acceptance
+  extensions:
+    Behat\MinkExtension\Extension:
+      goutte: 
+        guzzle_parameters:
+          curl.options:
+            CURLOPT_PORT: 8000
+      base_url: http://localhost:8000

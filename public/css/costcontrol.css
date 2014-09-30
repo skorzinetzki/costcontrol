@@ -1,0 +1,6 @@
+html, body { height: 100%; }
+body { padding-top: 70px; }
+#site { height: auto; margin: 0 auto -60px; min-height: 100%; padding: 0 0 60px; }
+footer { background-color: #F5F5F5; height: 60px; }
+.credit { margin: 20px 0; }
+td.amount { text-align: right }

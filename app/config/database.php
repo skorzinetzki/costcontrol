@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'costcontrol',
-			'username'  => 'costcontrol',
-			'password'  => 'costcontrol',
+			'database'  => 'cc_testing',
+			'username'  => 'travis',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

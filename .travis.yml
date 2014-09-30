@@ -1,4 +1,5 @@
-language: php
+﻿language: php
+
 php:
   - 5.5
   - hhvm

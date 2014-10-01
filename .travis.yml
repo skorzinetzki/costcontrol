@@ -4,18 +4,8 @@ php:
   - "5.5"
   - "5.4"
 
-services: mysql
-
 before_install:
   - composer selfupdate
-
-before_script:
-  - composer install --dev --prefer-source --no-interaction
-  # database configuration
-  - mysql -e 'create database cc_testing;'
-  # startup server environment
-  - php artisan migrate:install 
-  - php artisan migrate 
 
 script:
   - phpunit

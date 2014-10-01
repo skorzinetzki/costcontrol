@@ -1,0 +1,24 @@
+language: php
+
+php:
+  - 5.5
+  - hhvm
+
+services: mysql
+
+before_script:
+  # installation
+  - composer self-update
+  - composer install --dev --prefer-source --no-interaction
+  # database configuration
+  - mysql -e 'create database cc_testing;'
+  # startup server environment
+  - php artisan migrate:install 
+  - php artisan migrate 
+  - php artisan migrate:install --env=”testing”
+  - php artisan serve
+  - sleep 5
+
+script:
+  - phpunit
+  - vendor/bin/behat app/tests/acceptance/Category.feature

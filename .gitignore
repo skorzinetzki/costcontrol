@@ -9,3 +9,6 @@ Thumbs.db
 nb-configuration.xml
 nbactions.xml
 nbproject
+
+# IntelliJ PHPStorm
+.idea

@@ -1,11 +1,11 @@
 {
-  "name": "laravel/laravel",
-  "description": "The Laravel Framework.",
+  "name": "steve-korzinetzki/costcontrol",
+  "description": "simple sample application showing usage of phpunit, behat and laravel",
   "keywords": ["framework", "laravel"],
   "license": "MIT",
   "require": {
     "laravel/framework": "4.0.*",
-    "way/generators": "dev-master"
+    "way/generators": "1.1"
   },
   "require-dev": {
     "phpunit/phpunit": "3.7.*",

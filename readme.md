@@ -1,4 +1,4 @@
 ## Cost Control
-![travis build status](https://travis-ci.org/steve-korzinetzki/costcontrol.svg)
+[![Build Status](steve-korzinetzki/costcontrol.svg)](https://travis-ci.org/steve-korzinetzki/costcontrol)
 
 simple sample project showing behat and phpunit in action.

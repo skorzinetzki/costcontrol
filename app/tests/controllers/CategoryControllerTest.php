@@ -6,9 +6,6 @@ use Way\Tests\Should;
 class CategoryControllerTest extends TestCase {
 
     public function __construct() {
-        $this->categoryMock = Mockery::mock('Eloquent', 'Category');
-        $this->collectionMock = Mockery::mock('Illuminate\Database\Eloquent\Collection')->shouldDeferMissing();
-
         $this->categoryId = 1;
         $this->validCategoryInput = ['name' => 'Category'];
         $this->invalidCategoryInput = ['name' => 'C'];
@@ -16,6 +13,14 @@ class CategoryControllerTest extends TestCase {
 
     public function setUp() {
         parent::setUp();
+
+        $this->categoryMock = Mockery::mock('Eloquent', 'Category');
+        $this->categoryMock->shouldReceive('setAttribute')->passthru();
+        $this->categoryMock->shouldReceive('getAttribute')->passthru();
+        $this->categoryMock->shouldReceive('hasSetMutator')->passthru();
+        $this->categoryMock->shouldReceive('hasGetMutator')->passthru();
+        $this->categoryMock->shouldReceive('getDates')->passthru();
+        $this->collectionMock = Mockery::mock('Illuminate\Database\Eloquent\Collection')->shouldDeferMissing();
 
         // Tell IoC Container, when need of Category, then inject this Category mock
         $this->app->instance('Category', $this->categoryMock);

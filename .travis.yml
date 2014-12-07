@@ -13,6 +13,7 @@ before_script:
   - composer install --dev
   - mysql -e 'create database cc_testing;'
   - php artisan migrate:install --env="testing"
+  - php artisan migrate --env="testing"
  
 script:
   - phpunit --configuration phpunit.xml

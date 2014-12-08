@@ -14,7 +14,7 @@ before_script:
   - mysql -e 'create database cc_testing;'
   - php artisan migrate:install --env="testing"
   - php artisan migrate --env="testing"
-  - php artisan serve
+  - php artisan serve &
   - sleep 5
  
 script:

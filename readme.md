@@ -3,4 +3,4 @@
 
 simple sample project showing behat and phpunit in action.
 
-travis currently not processing behat, to be done next.
+see travis build for unit, integration and acceptance tests.

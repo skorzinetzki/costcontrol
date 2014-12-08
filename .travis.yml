@@ -10,7 +10,7 @@ before_install:
   - composer self-update
 
 before_script:
-  - composer install --dev
+  - composer install --dev --prefer-source --no-interaction
   - mysql -e 'create database cc_testing;'
   - php artisan migrate:install --env="testing"
   - php artisan migrate --env="testing"
